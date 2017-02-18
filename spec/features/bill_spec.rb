@@ -8,9 +8,8 @@ feature 'Viewing a bill' do
   it 'displays the result of an API call containing the bill details' do
     uri = URI('http://safe-plains-5453.herokuapp.com/bill.json')
     response = Net::HTTP.get(uri)
+    result = JSON.parse(response)
     visit('/')
-    expect(page).to have_content response
+    expect(page).to have_content result
   end
-
-
 end

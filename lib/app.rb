@@ -18,11 +18,10 @@ class BillServer < Sinatra::Base
       uri = URI(url)
       response = Net::HTTP.get(uri)
       result = JSON.parse(response)
+      puts result
     end
 
   end
-
-
 
   run! if app_file == $0
 

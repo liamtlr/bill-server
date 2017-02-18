@@ -17,8 +17,8 @@ class BillServer < Sinatra::Base
       url = BILL_URL
       uri = URI(url)
       response = Net::HTTP.get(uri)
-      result = JSON.parse(response)
-      puts result
+      @bill = JSON.parse(response)
+      erb :index
     end
 
   end

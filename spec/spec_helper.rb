@@ -2,6 +2,7 @@ require File.join(File.dirname(__FILE__), '..', 'lib/app.rb')
 
 require 'capybara'
 require 'capybara/rspec'
+require 'caller'
 require 'bill'
 
 Capybara.app = BillServer

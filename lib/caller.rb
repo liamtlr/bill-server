@@ -9,7 +9,7 @@ class Caller
   def get_bill
     uri = URI(@bill_url)
     response = Net::HTTP.get(uri)
-    @contents = JSON.parse(response)
+    JSON.parse(response)
   end
 
 end

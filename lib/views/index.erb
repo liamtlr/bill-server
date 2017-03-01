@@ -1,3 +1,15 @@
 <h1> Here is your bill for February: </h1>
 
-<%= @bill_contents %>
+
+<h3><%= @bill.generated %></h3>
+<h3><%= @bill.due_date %></h3>
+<h3>£<%= @bill.total %></h3>
+<h3><%= @bill.tv_subscription %></h3>
+<h3><%= @bill.tv_subscription_price %></h3>
+
+<h3><%= @bill.phone_subscription %></h3>
+<h3><%= @bill.phone_subscription_price %></h3>
+
+
+<h3><%= @bill.internet_subscription %></h3>
+<h3><%= @bill.internet_subscription_price %></h3>

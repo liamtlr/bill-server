@@ -1,6 +1,9 @@
 require 'sinatra/base'
 require 'net/http'
 require 'json'
+require_relative 'caller'
+require_relative 'bill'
+
 
 class BillServer < Sinatra::Base
 

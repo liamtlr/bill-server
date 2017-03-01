@@ -21,13 +21,13 @@ describe Bill do
       expect(subject.total).to eq 136.03
     end
     it 'displays TV subscription details' do
-      expect(subject.tv_subscription["name"]).to eq "Variety with Movies HD"
+      expect(subject.tv_subscription).to eq "Variety with Movies HD"
     end
     it 'displays phone subscription details' do
-      expect(subject.phone_subscription["name"]).to eq "Sky Talk Anytime"
+      expect(subject.phone_subscription).to eq "Sky Talk Anytime"
     end
     it 'displays internet subscription details' do
-      expect(subject.internet_subscription["name"]).to eq "Fibre Unlimited"
+      expect(subject.internet_subscription).to eq "Fibre Unlimited"
     end
     it 'displays subscription total details' do
       expect(subject.subscription_total).to eq 71.4

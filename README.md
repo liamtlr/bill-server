@@ -1,6 +1,6 @@
 # Sky Tech Test - Bill Server
 
-[Imgur](http://i.imgur.com/dX24rdY.png)
+![View bill](http://i.imgur.com/0LHQcNp.png)
 
 ## Setup
 

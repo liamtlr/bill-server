@@ -1,0 +1,65 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12"> <h3>SkyStore purchases</h3> </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12"> <h4>Rentals</h3> </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Cost</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @bill.rentals.each do |rental| %>
+          <tr>
+            <td><%= rental["title"] %></td>
+            <td>£<%= "%.02f" % rental["cost"] %></td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+</div>
+<div class="row">
+  <div class="col-md-12"> <h4>Buy And Keep</h3> </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Cost</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @bill.buy_and_keep.each do |purchase| %>
+        <tr>
+          <td><%= purchase["title"] %></td>
+          <td>£<%= "%.02f" % purchase["cost"] %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-8"></div>
+  <div class="col-md-4" id="sky-store-total">
+    <table class="table table-hover">
+      <tbody>
+          <tr>
+            <th><h4>Subtotal:</h4></th>
+              <td><h4>£<%= @bill.sky_store_total %></h4></td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>

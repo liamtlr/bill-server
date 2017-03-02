@@ -6,7 +6,6 @@ describe Bill do
   result = JSON.parse(response)
   let(:subject) { described_class.new(result) }
 
-
   describe '#initialize' do
     it 'stores the billing date' do
       expect(subject.generated).to eq "2015-01-11"
@@ -48,5 +47,7 @@ describe Bill do
       expect(subject.sky_store_total).to eq 24.97
     end
   end
+
+  context 'bill without certain elements'
 
 end

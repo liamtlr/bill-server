@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">     <h3>Your subscriptions</h3> </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>Media</th>
+            <th>Package</th>
+            <th>Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @bill.subscriptions.each do |subscription| %>
+          <tr>
+            <td><%= subscription["type"].capitalize %></td>
+            <td><%= subscription["name"] %></td>
+            <td>£<%= "%.02f" % subscription["cost"] %></td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+</div>
+<div class="row">
+  <div class="col-md-8"></div>
+  <div class="col-md-4" id="subscriptions-total">
+    <table class="table table-hover">
+      <tbody>
+          <tr>
+            <th><h4>Subtotal:</h4> </th>
+              <td><h4>£<%= @bill.subscription_total %></h4></td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+</div>

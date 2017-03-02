@@ -13,15 +13,15 @@
       <table class="table table-hover">
         <thead>
           <tr>
-            <th>Title</th>
-            <th>Cost</th>
+            <th class="col-md-8">Title</th>
+            <th class="col-md-4">Cost</th>
           </tr>
         </thead>
         <tbody>
           <% @bill.rentals.each do |rental| %>
           <tr>
-            <td><%= rental["title"] %></td>
-            <td>£<%= "%.02f" % rental["cost"] %></td>
+            <td class="col-md-8"><%= rental["title"] %></td>
+            <td class="col-md-4">£<%= "%.02f" % rental["cost"] %></td>
           </tr>
           <% end %>
         </tbody>
@@ -38,15 +38,15 @@
       <table class="table table-hover">
         <thead>
           <tr>
-            <th>Title</th>
-            <th>Cost</th>
+            <th class="col-md-8">Title</th>
+            <th class="col-md-4">Cost</th>
           </tr>
         </thead>
         <tbody>
         <% @bill.buy_and_keep.each do |purchase| %>
           <tr>
-            <td><%= purchase["title"] %></td>
-            <td>£<%= "%.02f" % purchase["cost"] %></td>
+            <td class="col-md-8"><%= purchase["title"] %></td>
+            <td class="col-md-4">£<%= "%.02f" % purchase["cost"] %></td>
           </tr>
         <% end %>
         </tbody>

@@ -1,5 +1,7 @@
 # Sky Tech Test - Bill Server
 
+[Imgur](http://i.imgur.com/dX24rdY.png)
+
 ## Setup
 
  - Clone the repo in your chosen folder

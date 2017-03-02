@@ -5,18 +5,18 @@
 ## Setup
 
  - Clone the repo in your chosen folder
- ````
+````
  git clone https://github.com/wirsindpapst/bill-server.git
- ````
+````
  - Navigate to the newly created folder and run the app:
- ````
+````
  cd bill-server
- ````
+````
  - Install and run Bundler:
- ````
+````
  gem install bundler
  bundle
- ````
+````
  - Run the app:
 ````
 ruby lib/app.rb

@@ -32,3 +32,13 @@ rspec
 ````
 
 ## Notes on the build
+
+ - Given I have applied for a Ruby role, and it the language I'm most comfortable with - Ruby was the obvious choice to build the app;
+ - As the app is a simple API consumer, Sinatra was the natural choice as it is lightweight but provides everything required for the brief;
+ - I wanted to use Bootstrap as it is possible to quickly come up with something professional looking;
+ - In addition, I was keen to make sure the bill contents are viewable on multiple devices.  I opted to Bootstrap's grid functionality to enable by bill to respond to different sizes;
+ - The Caller object is responsible for making the API call and parsing the results;
+ - The Bill object receives a hash (to ensure there are no argument errors if the API call does not provide all bill elements expected), which are then assigned to instance variables in in initialize method. This is the only place in the code where complicated hash internal are exposed;
+ - The apps only controller method initiates a caller and passes its output to a bill on instantiation;
+ - Partials are utilised to keep the index.erb tidy and to minimise the amount of HTML in one file;
+ - Additional formatting of integers to standard 'money format' strings is handled in the instance method 'format cost', which is called in the initialize method.

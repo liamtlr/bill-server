@@ -8,14 +8,18 @@ class Bill
     @generated = bill["statement"]["generated"]
     @due_date = bill["statement"]["due"]
     @billing_period = bill["statement"]["period"]
-    @total = "%.02f" % bill["total"]
+    @total = format_cost(bill["total"])
     @subscriptions = bill["package"]["subscriptions"]
-    @subscription_total = "%.02f" % bill["package"]["total"]
+    @subscription_total = format_cost(bill["package"]["total"])
     @call_charges = bill["callCharges"]["calls"]
     @call_charges_total = bill["callCharges"]["total"]
     @rentals = bill["skyStore"]["rentals"]
     @buy_and_keep = bill["skyStore"]["buyAndKeep"]
     @sky_store_total = bill["skyStore"]["total"]
+  end
+
+  def format_cost(cost_string)
+    "%.02f" % cost_string
   end
 
 end

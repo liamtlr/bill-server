@@ -1,0 +1,27 @@
+/*.container{
+  margin-right: 10px;
+  margin-left: 10px;
+}*/
+
+.container {
+  border-style: solid;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.img-responsive{
+  height: 15px;
+
+}
+table {
+    table-layout: fixed;
+
+}
+
+th {
+  color: #184A7C;
+}
+
+#bill-total{
+  border-top-style: none;
+}

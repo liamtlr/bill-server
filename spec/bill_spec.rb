@@ -4,6 +4,7 @@ describe Bill do
   uri = URI('http://safe-plains-5453.herokuapp.com/bill.json')
   response = Net::HTTP.get(uri)
   result = JSON.parse(response)
+  puts response
   let(:subject) { described_class.new(result) }
 
 

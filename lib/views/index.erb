@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Bill</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="javascript.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
   </head>
@@ -92,12 +93,12 @@
 </div>
 <div class="row">
   <div class="col-md-8"></div>
-  <div class="col-md-4">
+  <div class="col-md-4" id="subscriptions-total">
     <table class="table table-hover">
       <tbody>
           <tr>
-            <th>Subtotal: </th>
-              <td> £<%= @bill.subscription_total %> </td>
+            <th><h4>Subtotal:</h4> </th>
+              <td><h4>£<%= @bill.subscription_total %></h4></td>
           </tr>
       </tbody>
     </table>
@@ -107,11 +108,20 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-12"> <h3>Call charges</h3> </div>
+    <div class="col-md-4">
+      <h3>Call charges</h3>
+    </div>
+    <div class="col-md-4">
+      <h4> <%= @bill.call_charges.count %> calls made
+    </div>
+    <div class="col-md-4">
+      <a href="#" class="btn btn-primary btn-lg active" id="show-more" role="button" aria-pressed="true">Show more</a>
+      <a href="#" class="btn btn-primary btn-lg active" id="show-less" role="button" aria-pressed="true">Show less</a>
+    </div>
   </div>
   <div class="row">
     <div class="col-md-12">
-      <table class="table table-hover">
+      <table class="table table-hover" id="call-charge-details">
         <thead>
           <tr>
             <th>Called</th>
@@ -133,12 +143,12 @@
 </div>
 <div class="row">
   <div class="col-md-8"></div>
-  <div class="col-md-4">
+  <div class="col-md-4" id="call-charges-total">
     <table class="table table-hover">
       <tbody>
           <tr>
-            <th>Subtotal: </th>
-              <td> £<%= @bill.call_charges_total %> </td>
+            <th><h4>Subtotal:</h4></th>
+              <td><h4>£<%= @bill.call_charges_total %> </h4></td>
           </tr>
       </tbody>
     </table>
@@ -199,12 +209,12 @@
 
 <div class="row">
   <div class="col-md-8"></div>
-  <div class="col-md-4">
+  <div class="col-md-4" id="sky-store-total">
     <table class="table table-hover">
       <tbody>
           <tr>
-            <th>Subtotal: </th>
-              <td> £<%= @bill.sky_store_total %> </td>
+            <th><h4>Subtotal:</h4></th>
+              <td><h4>£<%= @bill.sky_store_total %></h4></td>
           </tr>
       </tbody>
     </table>

@@ -1,4 +1,5 @@
 <div class="container">
+
   <div class="row">
     <div class="col-md-4">
       <h3>Call charges</h3>
@@ -11,6 +12,7 @@
       <a href="#" class="btn btn-primary btn-lg active" id="show-less" role="button" aria-pressed="true">Show less</a>
     </div>
   </div>
+
   <div class="row">
     <div class="col-md-12">
       <table class="table table-hover" id="call-charge-details">
@@ -32,18 +34,20 @@
         </tbody>
       </table>
     </div>
-</div>
-<div class="row">
-  <div class="col-md-8"></div>
-  <div class="col-md-4" id="call-charges-total">
-    <table class="table table-hover">
-      <tbody>
+  </div>
+
+  <div class="row">
+    <div class="col-md-8"></div>
+    <div class="col-md-4" id="call-charges-total">
+      <table class="table table-hover">
+        <tbody>
           <tr>
             <th><h4>Subtotal:</h4></th>
               <td><h4>£<%= @bill.call_charges_total %> </h4></td>
           </tr>
-      </tbody>
-    </table>
+        </tbody>
+      </table>
+    </div>
   </div>
-</div>
+  
 </div>

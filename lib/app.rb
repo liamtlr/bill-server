@@ -10,9 +10,9 @@ class BillServer < Sinatra::Base
   BILL_URL = 'http://safe-plains-5453.herokuapp.com/bill.json'
 
   get '/' do
-    @caller = Caller.new(BILL_URL)
-    @bill_contents = @caller.get_bill
-    @bill = Bill.new(@bill_contents)
+    caller = Caller.new(BILL_URL)
+    bill_contents = caller.get_bill
+    @bill = Bill.new(bill_contents)
     erb :index
   end
 

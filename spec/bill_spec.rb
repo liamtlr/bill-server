@@ -1,6 +1,5 @@
 describe Bill do
 
-
   uri = URI('http://safe-plains-5453.herokuapp.com/bill.json')
   response = Net::HTTP.get(uri)
   result = JSON.parse(response)
@@ -47,7 +46,5 @@ describe Bill do
       expect(subject.sky_store_total).to eq 24.97
     end
   end
-
-  context 'bill without certain elements'
 
 end

@@ -18,6 +18,8 @@ class Bill
     @sky_store_total = bill["skyStore"]["total"]
   end
 
+  private
+
   def format_cost(cost_string)
     "%.02f" % cost_string
   end

@@ -11,17 +11,8 @@ describe Caller do
 
   describe '#get_bill' do
     it 'makes an API call to the URL to get the bill contents' do
-      uri = URI('http://safe-plains-5453.herokuapp.com/bill.json')
-      response = Net::HTTP.get(uri)
-      result = JSON.parse(response)
-      expect(subject.get_bill).to eq result
+      allow(JSON).to receive(:parse).and_return(dummy_bill)
+      expect(subject.get_bill).to eq dummy_bill
     end
   end
-
-  # describe '#bill_details' do
-  #   'it returns general information about the bill' do
-  #
-  #   end
-  #
-  # end
 end

@@ -1,8 +1,7 @@
-require 'spec_helper'
-
 
 feature 'Viewing a bill' do
   before do
+    allow(JSON).to receive(:parse).and_return(dummy_bill)
     visit('/')
   end
   it 'displays the total amount charged' do
@@ -17,7 +16,7 @@ feature 'Viewing a bill' do
     expect(page).to have_content 'Broadband	Fibre Unlimited	£16.40'
   end
   it 'displays details of number of calls made' do
-    expect(page).to have_content '28 calls made'
+    expect(page).to have_content '2 calls made'
   end
   it 'displays details of rentals' do
     expect(page).to have_content '50 Shades of Grey	£4.99'
@@ -29,6 +28,7 @@ end
 
 feature 'viewing and hiding itemised call details' do
   before do
+    allow(JSON).to receive(:parse).and_return(dummy_bill)
     visit('/')
   end
   it 'does not display itemised list of calls' do
@@ -49,7 +49,4 @@ feature 'viewing and hiding itemised call details' do
     expect(page).to have_selector('#show-less', visible: false)
     expect(page).to have_selector('#call-charge-details', visible: true)
   end
-
-
-
 end

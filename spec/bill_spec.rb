@@ -1,13 +1,6 @@
 describe Bill do
 
-  before(:each) do
-    uri = URI('http://safe-plains-5453.herokuapp.com/bill.json')
-    response = Net::HTTP.get(uri)
-    allow(JSON).to receive(:parse).with(response).and_return(dummy_bill)
-    @result = JSON.parse(response)
-  end
-
-  let(:subject) { described_class.new(@result) }
+  let(:subject) { described_class.new(dummy_bill) }
 
   describe '#initialize' do
     it 'stores the billing date' do
